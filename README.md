@@ -158,3 +158,14 @@ Authorization: Bearer <token>
 | GET    | /api/requests/mine     | View my adoption requests             | Yes            | -                             |
 | GET    | /api/requests          | View all requests (admin)             | Yes (admin)    | -                             |
 | PUT    | /api/requests/:id      | Update request status (approve/reject)| Yes (admin)    | `{ status: "approved" }`      |
+
+
+
+## Design References
+
+These websites were used as visual and functional inspiration for the UI and features of Meowly:
+
+- [Adopt A Pet](https://www.adoptapet.com/)
+- [Petfinder](https://www.petfinder.com/)
+- [Toronto Cat Rescue](https://www.torontocatrescue.ca/)
+- [Rescate Felino Chile](https://rescatefelinochile.cl/adopta/)
