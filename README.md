@@ -121,26 +121,40 @@ Educational Tips: A simple page with tips on cat care and the responsibilities o
 ## API Contract
 
 ### Authentication
+
 All private endpoints require a valid JWT token in the header:
 Authorization: Bearer <token>
 
-Users API
-Method	Endpoint	Description	Requires Auth	Body / Params
-POST	/api/register	Register new user	No	{ name, email, password, role }
-POST	/api/login	Authenticate user	No	{ email, password }
-GET	/api/profile	Get logged-in user's info	Yes	-
 
-Cats API
-Method	Endpoint	Description	Requires Auth	Body / Params
-GET	/api/cats	List all adoptable cats	No	Optional filters: age, breed, sticker_level
-GET	/api/cats/:id	Get details of a specific cat	No	:id in URL
-POST	/api/cats	Create a new cat profile	Yes (admin)	{ name, age, breed, personality, health_status, image_url, sticker_level }
-PUT	/api/cats/:id	Update a cat profile	Yes (admin)	{ updated fields }
-DELETE	/api/cats/:id	Delete a cat profile	Yes (admin)	-
+---
 
-Adoption Requests API
-Method	Endpoint	Description	Requires Auth	Body / Params
-POST	/api/requests	Submit adoption request	Yes	{ cat_id, message }
-GET	/api/requests/mine	View my adoption requests	Yes	-
-GET	/api/requests	View all requests (admin)	Yes (admin)	-
-PUT	/api/requests/:id	Update request status (approve/reject)	Yes (admin)	{ status: "approved" }
+### Users API
+
+| Method | Endpoint        | Description               | Requires Auth | Body / Params                      |
+|--------|------------------|---------------------------|----------------|-------------------------------------|
+| POST   | /api/register    | Register new user         | No             | `{ name, email, password, role }`   |
+| POST   | /api/login       | Authenticate user         | No             | `{ email, password }`               |
+| GET    | /api/profile     | Get logged-in user's info | Yes            | -                                   |
+
+---
+
+### Cats API
+
+| Method | Endpoint       | Description                    | Requires Auth | Body / Params                                                  |
+|--------|----------------|--------------------------------|----------------|-----------------------------------------------------------------|
+| GET    | /api/cats      | List all adoptable cats        | No             | Optional filters: `age`, `breed`, `sticker_level`               |
+| GET    | /api/cats/:id  | Get details of a specific cat  | No             | `:id` in URL                                                    |
+| POST   | /api/cats      | Create a new cat profile       | Yes (admin)    | `{ name, age, breed, personality, health_status, image_url, sticker_level }` |
+| PUT    | /api/cats/:id  | Update a cat profile           | Yes (admin)    | `{ updated fields }`                                           |
+| DELETE | /api/cats/:id  | Delete a cat profile           | Yes (admin)    | -                                                               |
+
+---
+
+### Adoption Requests API
+
+| Method | Endpoint              | Description                           | Requires Auth | Body / Params                |
+|--------|------------------------|---------------------------------------|----------------|-------------------------------|
+| POST   | /api/requests          | Submit adoption request               | Yes            | `{ cat_id, message }`         |
+| GET    | /api/requests/mine     | View my adoption requests             | Yes            | -                             |
+| GET    | /api/requests          | View all requests (admin)             | Yes (admin)    | -                             |
+| PUT    | /api/requests/:id      | Update request status (approve/reject)| Yes (admin)    | `{ status: "approved" }`      |
