@@ -178,3 +178,4 @@ These websites were used as visual and functional inspiration for the UI and fea
 
 ### Entity Relationship Diagram (ERD)
 ![ERD Diagram](assets/erd_diagram.png)
+
