@@ -170,7 +170,6 @@ These websites were used as visual and functional inspiration for the UI and fea
 - [Toronto Cat Rescue](https://www.torontocatrescue.ca/)
 - [Rescate Felino Chile](https://rescatefelinochile.cl/adopta/)
 
-
 ## Diagrams
 
 ### High-Level Design
