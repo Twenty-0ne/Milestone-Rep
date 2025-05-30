@@ -169,3 +169,12 @@ These websites were used as visual and functional inspiration for the UI and fea
 - [Petfinder](https://www.petfinder.com/)
 - [Toronto Cat Rescue](https://www.torontocatrescue.ca/)
 - [Rescate Felino Chile](https://rescatefelinochile.cl/adopta/)
+
+
+## Diagrams
+
+### High-Level Design
+![High Level Design](./assets/high_level_design.png)
+
+### Entity Relationship Diagram (ERD)
+![ERD Diagram](./assets/erd_diagram.png)
