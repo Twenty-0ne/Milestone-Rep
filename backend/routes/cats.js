@@ -1,27 +1,28 @@
 const express = require('express');
 const router = express.Router();
 
+// Import functions from the Cat controller
 const {
   getAllCats,
   getCatById,
   createCat,
   updateCat,
   deleteCat,
-} = require('../controllers/CatController');
+} = require('../controllers/CatController'); // Case-sensitive path; filename must match exactly
 
-// GET /api/cats
+// Route to retrieve all cats
 router.get('/', getAllCats);
 
-// GET /api/cats/:id
+// Route to retrieve a single cat by its ID
 router.get('/:id', getCatById);
 
-// POST /api/cats
+// Route to create a new cat entry
 router.post('/', createCat);
 
-// PUT /api/cats/:id
+// Route to update an existing cat by its ID
 router.put('/:id', updateCat);
 
-// DELETE /api/cats/:id
+// Route to delete a cat by its ID
 router.delete('/:id', deleteCat);
 
 module.exports = router;
