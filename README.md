@@ -179,3 +179,49 @@ These websites were used as visual and functional inspiration for the UI and fea
 ### Entity Relationship Diagram (ERD)
 ![ERD Diagram](assets/erd_diagram.png)
 
+### Backend Development (Meowly Project)
+
+---
+
+#### What was completed
+
+- Backend server configured with **Express**
+- Connected to **MongoDB Atlas** using **Mongoose**
+- Created folders for:
+  - `routes/` for API route files
+  - `controllers/` for logic handling
+  - `models/` for MongoDB schemas
+- Implemented basic test routes for:
+  - `/api/cats`
+  - `/api/users`
+  - `/api/adoptions`
+- Used **dotenv** for environment variable management
+- Verified MongoDB connection works locally
+- GitHub repository with regular commits and pushes
+
+---
+
+#### Postman API Testing
+
+- Postman is ready and installed
+- Due to technical difficulties, full testing of the endpoints could not be completed
+- Placeholder routes are working and respond successfully
+
+---
+
+#### Known Issues
+
+- The app currently throws a `MODULE_NOT_FOUND` error related to the `CatController.js` file
+- Some controllers and models are still in progress or need debugging
+- Authentication middleware is not yet implemented
+- Full Postman testing for all routes (`GET`, `POST`, etc.) is pending
+
+---
+
+#### Next Steps
+
+- Fix `CatController` import and test full functionality
+- Finish all controllers and connect models properly
+- Implement user authentication middleware
+- Complete Postman testing for all endpoints
+- Start frontend development
